@@ -1118,3 +1118,18 @@ body {
 }
 
 
+/* Apply padding and display to all form submission buttons */
+.contact-form button[type="submit"] {
+    /* Use the same padding and height as the CTAs */
+    padding: 0.75rem 1.5rem;
+    width: 100%; /* Make it full width for clean stacking */
+    margin-top: 1rem;
+    /* The border-radius and transition are handled by the general block above */
+}
+
+/* Ensure the WhatsApp button uses the same standard properties */
+.whatsapp-btn {
+    border-radius: 8px !important; 
+    /* (Ensure other WhatsApp colors are correctly set) */
+}
+
