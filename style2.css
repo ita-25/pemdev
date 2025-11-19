@@ -1245,3 +1245,69 @@ body {
 .return-btn {
     margin-top: 1.5rem;
 }
+
+
+/* --- Refined Button Base Styles --- */
+
+/* Apply to all primary/secondary CTAs and standard buttons */
+.cta-primary,
+.cta-secondary,
+.contact-form button[type="submit"] {
+    /* **1. Modern Border Radius:** Use a subtle curve */
+    border-radius: 8px !important; /* Slightly more curve than the previous 5px */
+    
+    /* **2. Smooth Hover Transition:** Makes button changes look slick */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.1s;
+    
+    /* **3. Subtle Press Effect:** Gives tactile feedback */
+    cursor: pointer;
+}
+
+/* --- Primary Button (Blue Fill) --- */
+.cta-primary,
+.contact-form button[type="submit"] {
+    /* Your existing color and border rules */
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.cta-primary:hover,
+.contact-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Slightly darker blue */
+    border-color: #0056b3;
+    /* **4. Hover/Press Effect:** Lifts the button slightly */
+    transform: translateY(-1px); 
+}
+
+/* --- Secondary Button (Outline) --- */
+.cta-secondary {
+    /* Your existing outline rules (assuming white text on dark hero, primary text elsewhere) */
+    background-color: transparent;
+    color: var(--primary-color); /* Default text color */
+    border: 2px solid var(--primary-color); /* Default border color */
+}
+
+.cta-secondary:hover {
+    background-color: var(--primary-color);
+    color: white; /* Text color flips */
+    border: 2px solid var(--primary-color);
+    /* **4. Hover/Press Effect:** Lifts the button slightly */
+    transform: translateY(-1px); 
+}
+
+
+/* Apply padding and display to all form submission buttons */
+.contact-form button[type="submit"] {
+    /* Use the same padding and height as the CTAs */
+    padding: 0.75rem 1.5rem;
+    width: 100%; /* Make it full width for clean stacking */
+    margin-top: 1rem;
+    /* The border-radius and transition are handled by the general block above */
+}
+
+/* Ensure the WhatsApp button uses the same standard properties */
+.whatsapp-btn {
+    border-radius: 8px !important; 
+    /* (Ensure other WhatsApp colors are correctly set) */
+}
