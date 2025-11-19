@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemdev Portfolio | Paul Ejime Mormah, Web Developer</title>
+    <link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="index.html" class="logo-link">         
+       <div class="logo">Pemdev</div>
+
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                  <li><a href="graphics.html">Graphics</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
 <main class="thankyou-main section-padding">
     <div class="thankyou-box">
         <i class="fas fa-check-circle success-icon"></i>
@@ -14,3 +44,43 @@
         <a href="index.html" class="return-btn cta-secondary">Return to Home Page</a>
     </div>
 </main>
+
+     <footer class="main-footer">
+        <div class="footer-grid">
+
+            <div class="footer-logo">
+                <h3>Pemdev</h3>
+                <p>Paul Ejime Mormah | Web Developer</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="graphics.html">Graphics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/EJohnPaul-cloud" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mormah-ejimepaul" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto: mormahejimepaul@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Pemdev Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
