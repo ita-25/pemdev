@@ -1186,3 +1186,62 @@ body {
         padding-bottom: 30px;
     }
 }
+
+
+/* --- Thank You Page Styling --- */
+.thankyou-main {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-light);
+}
+
+.thankyou-box {
+    max-width: 600px;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #28a745; /* Green checkmark */
+    margin-bottom: 1rem;
+}
+
+.thankyou-box h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.next-steps {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+}
+
+.next-steps h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* Specific WhatsApp Button Style */
+.whatsapp-btn {
+    background-color: #25D366; /* WhatsApp Green */
+    border-color: #25D366;
+    margin-bottom: 10px;
+}
+.whatsapp-btn:hover {
+    background-color: #1aae4b;
+    border-color: #1aae4b;
+}
+
+.return-btn {
+    margin-top: 1.5rem;
+}
