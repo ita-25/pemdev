@@ -32,23 +32,26 @@
     <p class="section-summary">I am actively seeking opportunities in a Junior Web Developer role. Please reach out via email for job inquiries, or connect with me through my professional network.</p>
 
     <div class="contact-content-grid">
-        <form action="https://formspree.io/f/mdkbebaa" method="POST" class="contact-form">
-            <h2>Send a Message</h2>
-            
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required>
+         <form action="https://formspree.io/f/mdkbebaa" method="POST" class="contact-form">
+    <h2>Send a Message</h2>
+    
+    <input type="hidden" name="_next" value="https://pemdev.vercel.app/thankyou.html" />
 
-            <label for="_replyto">Email Address</label>
-            <input type="email" name="_replyto" id="_replyto" required>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required>
 
-            <label for="subject">Subject</label>
-            <input type="text" name="subject" id="subject" required>
+    <label for="_replyto">Email Address</label>
+    <input type="email" name="_replyto" id="_replyto" required>
 
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="5" required></textarea>
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject" required>
 
-            <button type="submit" class="cta-primary">Submit Message</button>
-        </form>
+    <label for="message">Message</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
+
+    <button type="submit" class="cta-primary">Submit Message</button>
+</form>
+
 
         <div class="contact-info">
             <h2>Connect Professionally</h2>
