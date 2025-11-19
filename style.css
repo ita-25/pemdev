@@ -1,0 +1,1120 @@
+/* --- Global Resets & Basics --- */
+:root {
+    --primary-color: #007bff; /* Professional Blue */
+    --secondary-color: #6c757d; /* Subtle Gray */
+    --text-dark: #333;
+    --background-light: #f8f9fa;
+    --font-family: 'Arial', sans-serif; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: white;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logo-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Ensure the logo color remains the primary color set in .logo */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none; /* Hidden on large screens */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+
+/* --- Hero Section (Home) --- */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 5%;
+        /* 1. Background Image Setup */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Paul2.jpg');
+    /* IMPORTANT: Replace 'your-image-path.jpg' with the actual path to your photo */
+    
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* (Optional) Creates a nice parallax scroll effect */
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.role-title {
+    font-size: 1.2rem;
+     color: white !important; /* Forces all text elements to be white */
+    z-index: 2; /* Ensures text is above the image */
+}
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+     color: white !important; /* Forces all text elements to be white */
+    z-index: 2; /* Ensures text is above the image */
+}
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+     color: white !important; /* Forces all text elements to be white */
+    z-index: 2; /* Ensures text is above the image */
+}
+    margin-bottom: 2rem;
+}
+
+/* --- CTAs (Call-to-Action) --- */
+.cta-group {
+    /* Enable flex container for easy alignment */
+    display: flex; 
+    /* Default direction is column for mobile (vertical stacking) */
+    flex-direction: column; 
+    align-items: center; /* Center items horizontally when stacked */
+    gap: 15px; /* Adds space between the stacked buttons */
+    margin-top: 1.5rem;
+}
+
+.cta-group a {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    /* Remove the old side margins */
+    margin: 0; 
+    width: 90%; /* Make buttons take up most of the mobile screen width */
+    max-width: 300px; /* Limit width for very large phones/tablets */
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    text-align: center; /* Ensures text is centered */
+}
+
+.cta-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+}
+
+.cta-primary:hover {
+    background-color: #0056b3;
+}
+
+.cta-secondary {
+    background-color: transparent;
+    color: white; /* Changed primary color to white */
+    border: 2px solid white; /* Changed primary color border to white */
+}
+
+.cta-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+
+
+/* --- Media Query for Larger Screens (Desktop View) --- */
+@media (min-width: 768px) {
+    
+    /* ... (Existing code for navigation, etc.) ... */
+    
+    /* Fix: Display CTA buttons horizontally on large screens */
+    .cta-group {
+    /* Use flexbox to align items */
+    display: flex;
+    /* Keeps items horizontal (side-by-side) on all screens */
+    flex-direction: row; 
+    /* Centers the entire group horizontally within its container */
+    justify-content: center; 
+    /* Space between the two buttons */
+    gap: 20px; 
+    margin-top: 30px;
+    /* Ensures the group wraps only if necessary, but we'll try to prevent it */
+    flex-wrap: wrap; 
+}
+
+  .cta-group a {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    /* Important: Set width to auto so buttons size to content */
+    width: auto; 
+    /* Important: Prevents links from becoming too wide on mobile */
+    min-width: 150px; 
+    text-align: center; 
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+    .hero-content h2 {
+        font-size: 3.5rem;
+    }
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Remove the mobile-specific stacking rule */
+@media (max-width: 500px) {
+    .hero-buttons {
+        gap: 15px;
+    }
+}
+
+
+/* --- Footer --- */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #eee;
+    background-color: white;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* ======================================= */
+/* --- RESPONSIVE DESIGN (Mobile First) --- */
+/* ======================================= */
+
+/* Adjustments for Mobile Navigation (Default) */
+.main-nav {
+    display: none; /* Hide nav links by default on mobile */
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Below the header */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-nav ul {
+    flex-direction: column;
+}
+
+.main-nav ul li {
+    border-bottom: 1px solid #eee;
+}
+
+.main-nav ul li:last-child {
+    border-bottom: none;
+}
+
+.main-nav ul li a {
+    padding: 1rem;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: block; /* Show hamburger button on mobile */
+}
+
+/* JavaScript Class to show the menu */
+.main-nav.active {
+    display: block;
+}
+
+/* --- Media Query for Larger Screens (Desktop View) --- */
+@media (min-width: 768px) {
+    
+    .menu-toggle {
+        display: none; /* Hide hamburger button on desktop */
+    }
+
+    .main-nav {
+        display: block; /* Show nav links on desktop */
+        position: static;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .main-nav ul {
+        flex-direction: row; /* Horizontal links on desktop */
+    }
+
+    .main-nav ul li {
+        border-bottom: none;
+    }
+
+    .hero-content h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* --- Hamburger Icon Transformation --- */
+
+/* Change icon to X when menu is active */
+.menu-toggle .fa-bars {
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-nav.active + .menu-toggle .fa-bars {
+    /* Hides the bars icon */
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+/* Add the 'X' icon when active */
+.menu-toggle {
+    position: relative; /* Needed for absolute positioning of the X */
+}
+
+.menu-toggle::after {
+    /* Creates a pseudo-element for the 'X' */
+    content: '\f00d'; /* Font Awesome unicode for the 'X' (times) icon */
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; /* Required for solid icons */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    color: var(--primary-color);
+}
+
+/* Shows the 'X' icon when menu is active */
+.main-nav.active + .menu-toggle::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+
+/* --- CTAs (Call-to-Action) - Universal Horizontal Alignment --- */
+
+.cta-group {
+    /* Use flexbox to align items */
+    display: flex;
+    /* Keeps items horizontal (side-by-side) on all screens */
+    flex-direction: row; 
+    /* Centers the entire group horizontally within its container */
+    justify-content: center; 
+    /* Space between the two buttons */
+    gap: 20px; 
+    margin-top: 2rem;
+    /* Ensures the group wraps only if necessary, but we'll try to prevent it */
+    flex-wrap: wrap; 
+}
+
+.cta-group a {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    /* Important: Set width to auto so buttons size to content */
+    width: auto; 
+    /* Important: Prevents links from becoming too wide on mobile */
+    min-width: 150px; 
+    text-align: center; 
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+/* --- Services Section --- */
+.services-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.services-section h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-summary {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+}
+
+.services-grid {
+    display: grid;
+    /* Default to single column on mobile */
+    grid-template-columns: 1fr; 
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--background-light);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.service-card ul li:before {
+    content: "✓"; 
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Desktop Grid Layout */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on wider screens */
+    }
+}
+
+.section-padding {
+    padding: 5rem 5%;
+}
+
+.section-light-bg {
+    background-color: var(--background-light); /* Defined as #f8f9fa */
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.cta-center {
+    display: block;
+    margin: 2rem auto 0;
+    width: fit-content;
+}
+
+.project-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: stack on mobile */
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-top: 1rem;
+}
+
+.read-more-link {
+    display: block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .project-preview-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+}
+
+.services-summary-list {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.services-summary-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-summary-list li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.services-summary-list li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* --- 3. FOOTER (Blue Background) --- */
+.main-footer {
+    background-color: var(--primary-color); /* Use the primary blue color */
+    color: white; /* Default text color is white */
+    padding: 3rem 5% 1rem;
+}
+
+.footer-grid {
+    /* ... (Keep existing grid settings) ... */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Lighter divider for contrast */
+}
+
+.footer-grid h4 {
+    color: white; /* Headings are now white */
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white; /* Links are white */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--text-dark); /* Use black/dark text on hover for contrast (if needed) */
+}
+
+/* Ensure all lists in the footer grid have no bullets */
+.footer-links ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.social-icons a {
+    color: white; /* Icons are white */
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--text-dark); /* Use black/dark text on hover for contrast (if needed) */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8); /* Slightly more prominent white */
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr; /* Logo, Links, Social on desktop */
+    }
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 4rem 5%;
+}
+
+.contact-content-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.social-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Desktop Grid Layout */
+@media (min-width: 768px) {
+    .contact-content-grid {
+        grid-template-columns: 2fr 1fr; /* Form takes 2/3, Info takes 1/3 */
+    }
+}
+
+/* === 8. NEW CATEGORY GRID (Visual Impact) === */
+.category-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-section h2 {
+    text-align: center; 
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.category-grid {
+    display: grid;
+    gap: 20px;
+    /* Defines a complex grid structure inspired by the sample */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "item1 item2 item3 item3"
+        "item4 item4 item5 item6";
+}
+
+.category-card {
+    position: relative;
+    border-radius: var(--border-radius-card);
+    overflow: hidden;
+    height: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-decoration: none;
+    transition: transform var(--transition-speed);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.4s;
+}
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    color: var(--color-white);
+    /* Dark gradient for text readability over images */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    transition: background var(--transition-speed);
+}
+
+.category-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: var(--color-white);
+}
+
+.category-card p {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #eee;
+}
+
+/* Unique Grid Area Assignments */
+#cat-1 { grid-area: item1; } 
+#cat-2 { grid-area: item2; }
+#cat-3 { grid-area: item3; } /* Spans two columns */
+#cat-4 { grid-area: item4; } /* Spans two columns */
+#cat-5 { grid-area: item5; }
+#cat-6 { grid-area: item6; }
+
+
+/* --- CATEGORY SECTION STYLES FOR HORIZONTAL SCROLL (MOBILE FIX) --- */
+
+.category-grid {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    
+    /* CRITICAL: Enables horizontal scrolling and prevents wrapping */
+    overflow-x: auto;       
+    overflow-y: hidden;     
+    flex-wrap: nowrap;      
+    -webkit-overflow-scrolling: touch; /* Smoother scrolling on iOS */
+    
+    /* Hide the scrollbar for a cleaner look */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide the scrollbar for Webkit browsers (Chrome, Safari) */
+.category-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Defines the size of each card for the scroll */
+.category-card {
+    /* Ensures the card takes up a fixed amount of space horizontally */
+    flex: 0 0 250px; /* Card width is 250px (adjust this size if needed) */
+    max-width: 250px; 
+    height: auto; 
+    
+    /* Ensure existing card styles like border-radius, shadow, etc. are defined elsewhere */
+}
+
+/* Adds margin to the sides on mobile so the first/last card isn't right against the edge */
+@media (max-width: 768px) {
+    .category-section {
+        /* Prevents horizontal scrolling from clipping into main page padding */
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .category-grid {
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+}
+
+
+ /* Category Grid Collapse */
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: none; 
+    }
+    .category-card {
+        height: 220px;
+        grid-area: unset;
+    }
+
+    /* About Preview */
+    .about-content-wrapper {
+        flex-direction: column;
+    }
+    .about-image-block {
+        order: -1; /* Image first on mobile */
+    }
+
+    /* Footer Collapse */
+    .footer-section {
+        /* Force two columns on tablet/mid-size screens */
+        width: calc(50% - 15px); 
+        min-width: 200px; 
+    }
+}
+
+/* --- Mobile Devices (Up to 600px) --- */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    /* Category Grid */
+    .category-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+    .category-card {
+        min-height: 180px;
+    }
+    
+    /* --- Projects Page Layout --- */
+.projects-main {
+    padding-top: 2rem;
+}
+
+.projects-header {
+    padding: 2rem 5% 4rem;
+    text-align: center;
+}
+
+/* --- Project Showcase Container --- */
+.project-showcase {
+    display: flex;
+    flex-direction: column; /* Stack details and browser vertically on mobile */
+    gap: 30px;
+    padding: 4rem 5%;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.project-details {
+    max-width: 600px;
+}
+
+.project-showcase h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.tech-stack-list {
+    margin-top: 1rem;
+}
+
+/* --- Mini Browser Styling --- */
+.browser-container {
+    width: 100%;
+    max-width: 700px;
+    height: 400px; /* Fixed height for the showcase */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+.browser-header {
+    height: 30px;
+    background-color: #e4e4e4;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.browser-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.browser-dot.red { background-color: #ff5f56; }
+.browser-dot.yellow { background-color: #ffbd2e; }
+.browser-dot.green { background-color: #27c93f; }
+
+.browser-url {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+    background-color: #f5f5f5;
+    padding: 3px 10px;
+    border-radius: 4px;
+    max-width: 70%;
+}
+
+.browser-iframe {
+    width: 100%;
+    height: calc(100% - 30px); /* Total height minus header height */
+    border: none;
+}
+
+/* --- Media Query for Desktop Layout (Side-by-Side) --- */
+@media (min-width: 900px) {
+    .project-showcase {
+        flex-direction: row; /* Details and browser side-by-side */
+        text-align: left;
+        justify-content: space-between;
+    }
+    
+    /* Project 1: Default order (Details on Left, Browser on Right) */
+    .project-showcase > div {
+        flex-basis: 48%; /* Equal width distribution */
+    }
+
+    /* Project 2, 4, etc.: Reverse order (Browser on Left, Details on Right) */
+    .project-showcase.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .browser-container {
+        margin-top: 0;
+    }
+}
+
+/* --- Comprehensive Project List Styling --- */
+.project-list-columns {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 40px;
+    text-align: left;
+}
+
+.project-list-columns h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.project-list-columns ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list-columns li {
+    margin-bottom: 8px;
+}
+
+.project-list-columns li a {
+    color: var(--text-dark); /* Use dark text color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-list-columns li a:hover {
+    color: var(--primary-color); /* Highlight on hover */
+}
+
+@media (min-width: 768px) {
+    .project-list-columns {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on desktop */
+    }
+}
+
+/* --- Comprehensive Project List Styling --- */
+.project-list-columns {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 25px; /* Reduced gap slightly */
+    text-align: left;
+    padding: 0 5%; /* Add some padding if the container is tight */
+}
+
+/* New: Style the box/container for each list column */
+.project-list-columns > div {
+    background-color: white; /* White box background */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Subtle border for separation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.project-list-columns h3 {
+    color: var(--primary-color); /* Highlight header with blue */
+    margin-bottom: 1rem;
+    /* Removed the bottom border for a cleaner look */
+    padding-bottom: 0; 
+    font-size: 1.3rem;
+}
+
+.project-list-columns ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.project-list-columns li {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #eee; /* Subtle separator line */
+    padding-bottom: 5px;
+}
+.project-list-columns li:last-child {
+    border-bottom: none; /* No separator on the last item */
+}
+
+.project-list-columns li a {
+    color: var(--text-dark); 
+    text-decoration: none;
+    font-weight: 500; /* Make the links stand out a bit more */
+    display: block;
+    transition: color 0.3s;
+}
+
+.project-list-columns li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .project-list-columns {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* --- Centering CTA within the Project Showcase Details --- */
+.project-showcase .project-details {
+    /* If you haven't defined max-width yet, define it here */
+    max-width: 600px; 
+    
+    /* On mobile and centered sections, center the text/content */
+    text-align: center;
+}
+
+/* Ensure the button is treated as a block element for centering */
+.project-showcase .project-details .cta-primary {
+    /* To allow centering */
+    display: inline-block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* On desktop, align the text to the left */
+@media (min-width: 900px) {
+    .project-showcase .project-details {
+        text-align: left; /* Revert to left alignment on desktop */
+    }
+    
+    .project-showcase .project-details .cta-primary {
+        margin-left: 0; /* Align button to the left edge of the details box */
+        margin-right: auto;
+    }
+}
+    
+    /* ======================================= */
+/* GRAPHICS GALLERY PAGE STYLING */
+/* ======================================= */
+
+.graphics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px; /* Fixed height for consistent look */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 123, 255, 0.85); /* Primary color overlay */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+

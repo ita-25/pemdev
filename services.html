@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemdev Portfolio | Paul Ejime Mormah, Web Developer Services</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="index.html" class="logo-link">
+        <div class="logo">Pemdev</div>
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                  <li><a href="graphics.html">Graphics</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+<main class="services-section">
+    <h1>My Expertise: Clean, Modern, and Scalable Web Solutions</h1>
+    <p class="section-summary">I leverage my foundation in the core web technologies and my current push into the full-stack ecosystem to offer reliable and efficient web development services. My focus is on delivering responsive solutions that meet client goals.</p>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Static Website Development</h3>
+            <p>Professional, high-performance static sites (e.g., landing pages, small business portfolios) using HTML, CSS, and vanilla JS.</p>
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>Responsive Design</li>
+                <li>Performance Optimization</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>Frontend Prototyping</h3>
+            <p>Rapid development of user interface (UI) mockups and functional prototypes for client concepts or existing systems (like the UDMS).</p>
+            <ul>
+                <li>JavaScript</li>
+                <li>UI/UX Principles</li>
+                <li>Modern Frameworks (as skills grow)</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>Code Refactoring & Optimization</h3>
+            <p>Reviewing and cleaning existing codebases to improve readability, performance, and accessibility standards.</p>
+            <ul>
+                <li>Clean Code Practices</li>
+                <li>W3C Standards</li>
+                <li>Git Version Control</li>
+            </ul>
+        </div>
+    </div>
+    
+        <section id="graphic-design" class="service-detail section-padding">
+            <div class="container">
+                <div class="service-content-block">
+                    <i class="fas fa-paint-brush service-icon"></i>
+                    <h3>Creative Graphic Design</h3>
+                    <p>Visual assets are key to a powerful brand identity. I create striking graphics that are consistent with your overall message, from initial concept to final polished asset ready for digital and print use.</p>
+                    
+                    <p class="service-tags">Includes: <strong>Logos, Posters, Flyers, Social Media Banners, Digital Cards.</strong></p>
+                    
+                    <a href="graphics.html" class="btn btn-primary">View Graphic Gallery</a>
+                </div>
+            </div>
+        </section>
+
+    <div class="cta-section">
+        <p>Ready to start a project?</p>
+        <a href="contact.html" class="cta-primary">Get a Quote or Start a Conversation →</a>
+    </div>
+</main>
+
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            
+            <div class="footer-logo">
+                <h3>Pemdev</h3>
+                <p>Paul Ejime Mormah | Web Developer</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="services.html">Services</a></li>
+                      <li><a href="graphics.html">Graphics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/EJohnPaul-cloud" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mormah-ejimepaul" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto: mormahejimepaul@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Pemdev Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

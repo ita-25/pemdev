@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemdev Portfolio | Paul Ejime Mormah, Web Developer Contact</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+       <a href="index.html" class="logo-link">         
+       <div class="logo">Pemdev</div>
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                  <li><a href="graphics.html">Graphics</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+<main class="contact-section">
+    <h1>Let's Build Something Great Together</h1>
+    <p class="section-summary">I am actively seeking opportunities in a Junior Web Developer role. Please reach out via email for job inquiries, or connect with me through my professional network.</p>
+
+    <div class="contact-content-grid">
+        <form action="https://formspree.io/f/mdkbebaa" method="POST" class="contact-form">
+            <h2>Send a Message</h2>
+            
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="_replyto">Email Address</label>
+            <input type="email" name="_replyto" id="_replyto" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" required>
+
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+
+            <button type="submit" class="cta-primary">Submit Message</button>
+        </form>
+
+        <div class="contact-info">
+            <h2>Connect Professionally</h2>
+            <p>For job inquiries, the fastest route is via email or LinkedIn.</p>
+            
+            <ul class="social-links">
+                <li><i class="fas fa-envelope"></i> Email: <a href="mailto: mormahejimepaul@gmail.com">mormahejimepaul@gmail.com</a></li>
+                <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/EJohnPaul-cloud">Ejohnpaul-cloud</a></li>
+                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/mormah-ejimepaul">Paul Ejime Mormah</a></li>
+                </ul>
+        </div>
+    </div>
+</main>
+
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            
+            <div class="footer-logo">
+                <h3>Pemdev</h3>
+                <p>Paul Ejime Mormah | Web Developer</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="graphics.html">Graphics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/EJohnPaul-cloud" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mormah-ejimepaul" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto: mormahejimepaul@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Pemdev Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
